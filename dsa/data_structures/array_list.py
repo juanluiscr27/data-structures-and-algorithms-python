@@ -10,6 +10,8 @@ class ArrayList:
     """
 
     def __init__(self, length: int):
+        if length < 1:
+            raise AttributeError("ArrayList length cannot be negative")
         self._array = Array(length)
         self.size = 0
 

@@ -56,7 +56,7 @@ class LinkedList:
 
     def is_empty(self) -> bool:
         """
-        Check if the LinkedList has elements or is empty
+        Check if the LinkedList has elements in it or is empty
         :return: True if the LinkedList has no first element, otherwise False
         """
         return self._head is None
@@ -99,7 +99,8 @@ class LinkedList:
         """
         Inserts an element with a given value at the beginning of the list
         and set its address field to point to the previous first.
-        If the list is empty the first element is the same as the last
+        If the list is empty the first element is the same as the last.
+        Inserts a new element with constant O(1) time complexity
         :param value: Value of the Node
         """
         new_node = Node(value)
@@ -115,7 +116,8 @@ class LinkedList:
         """
         Inserts an element with a given value at the end of the list
         and set the address field of the previous last to point to this.
-        If the list is empty the last element is the same as the first
+        If the list is empty the last element is the same as the first.
+        Inserts a new element with constant O(1) time complexity
         :param value: Value of the Node
         """
         new_node = Node(value)
@@ -163,7 +165,8 @@ class LinkedList:
         """
         Deletes the element at the beginning of the list and set the list `head` field
         to point to the previous second element.
-        If the list has only one Node the first and the last element are removed
+        If the list has only one Node the first and the last element are removed.
+        Removes the element with constant O(1) time complexity
         :return: None
         :raise: NoSuchElementError if the list is empty
         """
@@ -183,7 +186,8 @@ class LinkedList:
         """
         Deletes the element at the end of the list and set the list `tail` field
         to point to the Node previous the last.
-        If the list has only one Node the first and the last element are removed
+        If the list has only one Node the first and the last element are removed.
+        Removes the element with linear O(n) time complexity
         :return: None
         :raise: NoSuchElementError if the list is empty
         """
@@ -215,7 +219,7 @@ class LinkedList:
         :raise: IndexError if the given index is larger than the ArrayList size
         or is a negative integer
         """
-        if self.is_empty() or 0 > index or index > self.size:
+        if self.is_empty() or 0 > index or index >= self.size:
             raise IndexError("LinkedList index out of range")
 
         counter = 0
@@ -245,6 +249,31 @@ class LinkedList:
             current_node = current_node.next
 
         return -1
+
+    def get(self, index: int):
+        """
+        Retrieves the value of the element at the specified index position.
+        Access an element with constant O(1) time complexity
+        :param index: Position to retrieve
+        :return: The value of the element at given index
+        :raise: IndexError if the given index is larger than the LinkedList size
+        or is a negative integer
+        """
+        if self.is_empty() or 0 > index or index >= self.size:
+            raise IndexError("LinkedList index out of range")
+        if index == 0:
+            return self._head
+        if index == self.size - 1:
+            return self._tail
+
+        counter = 0
+        current_node = self._head
+        while current_node:
+            if counter == index:
+                return current_node.value
+
+            current_node = current_node.next
+            counter += 1
 
     def contains(self, value) -> bool:
         """

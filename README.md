@@ -1,4 +1,5 @@
 # Data Structure and Algorithms
+Data Structures and Algorithms concepts and implementation using python
 
 ----
 A computer program is a collection of instructions to perform a specific task. For this, a computer 
@@ -25,13 +26,13 @@ Time complexity in computer terms indicates the run time an algorithm require to
 certain task. On the oder hand, space complexity refers to amount memory required by such algorithm.
 
 Common values of algorithm complexity are, starting from the most efficient:
-* O(1): Constant
-* O(log n): Logarithmic
-* O(n): Linear
-* O(n log n): Quasi-linear
-* O(n^2): Quadratic
-* O(2^n): Exponential
-* O(n!): Factorial
+* **O(1):** Constant
+* **O(log n):** Logarithmic
+* **O(n):** Linear
+* **O(n log n):** Quasi-linear
+* **O(n^2):** Quadratic
+* **O(2^n):** Exponential
+* **O(n!):** Factorial
 
 ## Data Structures
 Data structure is a storage that is used to store and organize data. It is a way of arranging data 
@@ -47,11 +48,11 @@ Is a fundamental type of data structure that stores the data of only one type. P
 structure is a data structure that can hold a single value in a specific location. These data 
 structures commonly are the data types which come with built-in support in the programming 
 languages. For example, most of the languages provide the following built-in data types:
-* Integers: The integer data type contains whole numbers that can be either negative or positive 
+* **Integers:** The integer data type contains whole numbers that can be either negative or positive 
 numeric values.
-* Floating: The float is a data type that can hold decimal values.
-* Boolean: It is a data type that can hold either a `True` or a `False` value.
-* Character: It is a data type that can hold a single character value both uppercase and lowercase.
+* **Floating:** The float is a data type that can hold decimal values.
+* **Boolean:** It is a data type that can hold either a `True` or a `False` value.
+* **Character:** It is a data type that can hold a single character value both uppercase and lowercase.
 
 ### Non-primitive data structure
 The non-primitive data structure is a type of data structure which is a user-defined that stores 
@@ -83,17 +84,17 @@ operations. The particular data structure we chose largely depends on the freque
 that needs to be performed on the data structure.
 
 The basic data structure operations are:
-* Traversing: Refers to the process of visiting each node in a data structure.
-* Searching: Is the process of finding a given value position in a collection of values.
-* Insertion: Add one or more data elements into a data structure at a given value position.
-* Deletion: Remove an existing element from a data structure at a given position and re-organizing 
+* **Traversing:** Refers to the process of visiting each node in a data structure.
+* **Searching:** Is the process of finding a given value position in a collection of values.
+* **Insertion:** Add one or more data elements into a data structure at a given value position.
+* **Deletion:** Remove an existing element from a data structure at a given position and re-organizing 
 all elements.
-* Sorting: Refers to changing the value of an existing element of a data structure at a given position.
+* **Sorting:** Refers to changing the value of an existing element of a data structure at a given position.
 
 ### Arrays
 Arrays are defined as the collection of items with same data types stored at contiguous memory locations.
-Each item stored in an array is called an element. Each location of an element in an array has a numerical
-value which is used to identify the element, and we call it index. Each data element in an Array can be 
+Each item stored in an array is called an *element*. Each location of an element in an array has a numerical
+value which is used to identify the element, and we call it *index*. Each data element in an Array can be 
 randomly accessed by using its index number.
 
 Arrays are useful because:
@@ -101,13 +102,14 @@ Arrays are useful because:
 * Arrays are good for storing multiple values.
 * Arrays are best to process multiple values quickly and easily.
 
+#### Arrays Basic Operations
 Following are the basic operations supported by an array:
-* Access − Reads the value of an element in the array with constant time O(1) knowing its index.
-* Search − Searches an element using the given value with linear time complexity O(n).
-* Insertion − Adds an element at the given position with runtime complexity O(n).
-* Deletion − Deletes an element at the given index and time complexity O(n).
+* Access − Reads the value of an element in the array with constant time `O(1)` knowing its index.
+* Search − Searches an element using the given value with linear time complexity `O(n)`.
+* Insertion − Adds an element at the given position with runtime complexity `O(n)`.
+* Deletion − Deletes an element at the given index and time complexity `O(n)`.
 
-In array, space complexity for worst case is O(n), where 'n' is the number of elements in the given array.
+In array, space complexity for worst case is `O(n)`, where `n` is the number of elements in the given array.
 
 #### Advantages of Array
 - Array provides the single name for the group of variables of the same data type. 
@@ -138,28 +140,59 @@ declaration. List grows as per the program's demand and limited to the available
 
 #### Operations performed on Linked list
 The basic operations that are supported by a list are mentioned as follows:
-* Insertion - This operation is performed to add an element into the list. Time complexity O(1).
-* Deletion - It is performed to delete an operation from the list. Time complexity O(1).
-* Access - It is performed to access the value of an elements in the list using the given key. Time 
-complexity O(n).
-* Search - It is performed to search an element from the list by its value. Time complexity O(n).
+* **Insertion** - This operation is performed to add an element into the list. Time complexity `O(1)`.
+* **Deletion** - It is performed to delete an operation from the list. Time complexity `O(1)`.
+* **Access** - It is performed to access the value of an elements in the list using the given key. Time 
+complexity `O(n)`.
+* **Search** - It is performed to search an element from the list by its value. Time complexity `O(n)`.
 
 #### Advantages of Linked list
-* Dynamic data structure - The size of the linked list may vary according to the requirements. Linked list 
+* **Dynamic data structure** - The size of the linked list may vary according to the requirements. Linked list 
 does not have a fixed size.
-* Insertion and deletion - Unlike arrays, insertion, and deletion in linked list is easier.
-* Memory efficient - The size of a linked list can grow or shrink according to the requirements, so memory 
+* **Insertion and deletion** - Unlike arrays, insertion, and deletion in linked list is easier.
+* **Memory efficient** - The size of a linked list can grow or shrink according to the requirements, so memory 
   consumption in linked list is efficient.
-* Implementation - We can implement both stacks and queues using linked list.
+* **Implementation** - We can implement both stacks and queues using linked list.
 
 #### Disadvantages of Linked list
-* Memory usage - In linked list, node occupies more memory than array. Each node of the linked list 
+* **Memory usage** - In linked list, node occupies more memory than array. Each node of the linked list 
 occupies two types of variables, one is a data variable, and another one is the pointer variable.
-* Traversal - Traversal is not easy in the linked list. If we have to access an element in the linked list, 
+* **Traversal** - Traversal is not easy in the linked list. If we have to access an element in the linked list, 
   we cannot access it randomly, while in case of array we can randomly access it by index. 
-* Reverse traversing - Backtracking or reverse traversing is difficult in a linked list.
+* **Reverse traversing** - Backtracking or reverse traversing is difficult in a linked list.
 
 ### Stacks
+A stack is an Abstract Data Type that allows operations at one end only. At any given time, we can only 
+access the top element of a stack. This means, Stack is a special linear data structure that follows 
+the Last-In-First-Out (LIFO) principle. 
+
+In stack terminology, insertion operation is called *push* and removal operation is called *pop*. 
+A pointer called *top* is used to keep track of the top element in the stack.
+
+Although stack is a simple data structure to implement, it is very powerful. Stacks are useful because:
+* Stack is used for performing UNDO/REDO operation. 
+* Recursion, it means a function which calls itself, to maintain all the previous records of the function, 
+the compiler creates a system stack. 
+* Depth First Search is implemented on Graphs uses the stack data structure. 
+* Computer memory management; the stack manages the memory. When the function is created, all its 
+variables are assigned in the stack memory. When the function completed its execution, all the variables 
+assigned in the stack are released.
+
+#### Stacks Basic Operations 
+Stacks normally support tow basic operations:
+* **Push** - Insert (store) a new element to the top of a stack.
+* **Pop** - Remove (access) an element from the top of a stack.
+
+To use a stack efficiently, we need to check the status of stack as well. For the same purpose, the 
+following functionality is added to the stacks:
+* **Is Empty** - Check if the stack is empty.
+* **Is Full** - Check if the stack is full.
+* **Peek** - Get the value of the top element without removing it.
+
+Stack Time Complexity depends on the base implementation. For the array-based implementation of a stack, 
+the push and pop operations take constant time `O(1)`. On the other hand, when a Linked list is used to
+implement a Stack, the time complexity for the push operation is constant `O(1)`, but popping the
+last element has a linear time complexity `O(n)`.
 
 ### Queues
 

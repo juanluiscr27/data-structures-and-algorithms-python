@@ -8,9 +8,10 @@ def test_linked_list():
     # Adding elements to the list
     my_linked_list.add_first(5)
     my_linked_list.add_last(10)
-    my_linked_list.add_last(8)
-    my_linked_list.add_last(4)
+    my_linked_list.add_at(0, 8)
+    my_linked_list.add_at(3, 4)
     my_linked_list.add_first(7)
+    my_linked_list.add_last(50)
     my_linked_list.remove_first()
     my_linked_list.remove_last()
     my_linked_list.add_at(2, 20)
@@ -21,7 +22,8 @@ def test_linked_list():
     my_linked_list.replace(1, 9.97)
     print(f"Updated list: \n{my_linked_list}")
 
-    print(f"Index of 8: {my_linked_list.index_of(8)}")
+    print(f"Index of 8: {my_linked_list.index_of(5)}")
+    print(f"Contains 10?: {my_linked_list.contains(8)}")
 
 
 if __name__ == '__main__':
