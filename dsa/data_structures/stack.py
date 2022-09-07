@@ -33,7 +33,8 @@ class Stack:
 
     def push(self, item):
         """
-        Inserts a new element at the top of the Stack
+        Inserts an element at the top of the Stack
+        Inserts a new element with constant O(1) time complexity
         :param item: element to insert
         :raise: StackOverFlowError if the Stack is full at the moment of insertion
         """
@@ -46,6 +47,7 @@ class Stack:
     def pop(self):
         """
         Removes the element at the top of the Stack
+        Removes the last element with linear O(n) time complexity
         :return: The item removed
         :raise: StackEmptyError if the Stack is empty at the moment of deletion
         """
@@ -72,6 +74,7 @@ class Stack:
     def search(self, item):
         """
         Look up an element is present in the Stack and returns its position
+        Traverses the Stack with linear O(n) time complexity
         :param item: Element to search for
         :return: The element index if exist or -1 if not
         """

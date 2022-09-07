@@ -93,9 +93,9 @@ all elements.
 
 ### Arrays
 Arrays are defined as the collection of items with same data types stored at contiguous memory locations.
-Each item stored in an array is called an *element*. Each location of an element in an array has a numerical
-value which is used to identify the element, and we call it *index*. Each data element in an Array can be 
-randomly accessed by using its index number.
+Each item stored in an array is called an *element*. Each location of an element in an array has a 
+numerical value which is used to identify the element, and we call it *index*. Each data element in an 
+Array can be randomly accessed by using its index number.
 
 Arrays are useful because:
 * Searching a value in an array is easier.
@@ -109,7 +109,8 @@ Following are the basic operations supported by an array:
 * Insertion − Adds an element at the given position with runtime complexity `O(n)`.
 * Deletion − Deletes an element at the given index and time complexity `O(n)`.
 
-In array, space complexity for worst case is `O(n)`, where `n` is the number of elements in the given array.
+In array, space complexity for worst case is `O(n)`, where `n` is the number of elements in the given 
+array.
 
 #### Advantages of Array
 - Array provides the single name for the group of variables of the same data type. 
@@ -147,18 +148,18 @@ complexity `O(n)`.
 * **Search** - It is performed to search an element from the list by its value. Time complexity `O(n)`.
 
 #### Advantages of Linked list
-* **Dynamic data structure** - The size of the linked list may vary according to the requirements. Linked list 
-does not have a fixed size.
+* **Dynamic data structure** - The size of the linked list may vary according to the requirements. Linked 
+list does not have a fixed size.
 * **Insertion and deletion** - Unlike arrays, insertion, and deletion in linked list is easier.
-* **Memory efficient** - The size of a linked list can grow or shrink according to the requirements, so memory 
-  consumption in linked list is efficient.
+* **Memory efficient** - The size of a linked list can grow or shrink according to the requirements, so 
+memory consumption in linked list is efficient.
 * **Implementation** - We can implement both stacks and queues using linked list.
 
 #### Disadvantages of Linked list
 * **Memory usage** - In linked list, node occupies more memory than array. Each node of the linked list 
 occupies two types of variables, one is a data variable, and another one is the pointer variable.
-* **Traversal** - Traversal is not easy in the linked list. If we have to access an element in the linked list, 
-  we cannot access it randomly, while in case of array we can randomly access it by index. 
+* **Traversal** - Traversal is not easy in the linked list. If we have to access an element in the linked 
+list, we cannot access it randomly, while in case of array we can randomly access it by index. 
 * **Reverse traversing** - Backtracking or reverse traversing is difficult in a linked list.
 
 ### Stacks
@@ -187,7 +188,7 @@ To use a stack efficiently, we need to check the status of stack as well. For th
 following functionality is added to the stacks:
 * **Is Empty** - Check if the stack is empty.
 * **Is Full** - Check if the stack is full.
-* **Peek** - Get the value of the top element without removing it.
+* **Peek** - Get the value of the front element without removing it.
 
 Stack Time Complexity depends on the base implementation. For the array-based implementation of a stack, 
 the push and pop operations take constant time `O(1)`. On the other hand, when a Linked list is used to
@@ -195,6 +196,39 @@ implement a Stack, the time complexity for the push operation is constant `O(1)`
 last element has a linear time complexity `O(n)`.
 
 ### Queues
+Queue is an abstract data structure that is open at both ends, rear and front. One end is always used 
+to insert data and the other is used to remove data. Queue follows First-In-First-Out principle.
+
+Queues maintain two data pointers, *front* points to the element at the head of the queue and *rear* points
+to the tail item. Putting items in the queue is called *enqueue*, and removing items from the queue is 
+called *dequeue*.
+
+Due to the fact that queue performs actions on first in first out basis which is quite fair for the 
+ordering of actions. Queues are useful because:
+* Queues are widely used as waiting lists for a single shared resource like printer, disk, CPU.
+* Queues are used in asynchronous transfer of data.
+* Queues are used as buffers in many multimedia applications. 
+* Queues are used in operating systems for handling interrupts.
+* Queues are used inDepth First Search is implemented on Graphs data structure.
+
+#### Queue Basic Operations 
+Here are the basic operations associated with queues :
+* **Enqueue** - Add (store) a new item to the tail of a queue.
+* **Dequeue** - Remove (access) an item from the head of a queue.
+
+Other functions are required to make the fundamental queue operations more efficient:
+* **Peek** - Get the value of the top item without removing it.
+* **Is Empty** - Check if the queue is empty.
+* **Is Full** - Check if the queue is full.
+
+Queue Time Complexity depends on the base implementation. For the array-based implementation of a queue, 
+the enqueue and dequeue operations take constant time `O(1)` to write and remove values on the base array. 
+Despite they array-based fast operations, Linked list implementations are preferred, because of the 
+scalability and memory issues with arrays.
+
+When a Linked list is used to implement a queue, the time complexity for the enqueue and dequeue operation 
+are constant `O(1)`. Even though, the space complexity of linked representation of a queue with `n` 
+elements is `O(n)`.
 
 ### Strings
 
