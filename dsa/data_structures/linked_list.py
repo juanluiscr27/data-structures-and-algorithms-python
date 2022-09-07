@@ -56,7 +56,7 @@ class LinkedList:
 
     def is_empty(self) -> bool:
         """
-        Check if the LinkedList has elements in it or is empty
+        Check if the LinkedList has no elements in it
         :return: True if the LinkedList has no first element, otherwise False
         """
         return self._head is None

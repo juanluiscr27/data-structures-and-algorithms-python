@@ -19,22 +19,23 @@ class Stack:
 
     def is_empty(self):
         """
-        Check if the Stack has items in it or is empty
+        Check if the Stack has no items in it
         :return: True if the Stack top field is pointing to no item, otherwise False
         """
         return self.top == -1
 
     def is_full(self):
         """
-
-        :return:
+        Check if the Stack has filled its capacity
+        :return: True if the Stack top field is pointing to the higher possible index, otherwise False
         """
         return self.top == self.capacity - 1
 
     def push(self, item):
         """
-
-        :param item:
+        Inserts a new element at the top of the Stack
+        :param item: element to insert
+        :raise: StackOverFlowError if the Stack is full at the moment of insertion
         """
         if self.is_full():
             raise StackOverFlowError("Stack is full")
@@ -44,8 +45,9 @@ class Stack:
 
     def pop(self):
         """
-
-        :return:
+        Removes the element at the top of the Stack
+        :return: The item removed
+        :raise: StackEmptyError if the Stack is empty at the moment of deletion
         """
         if self.is_empty():
             raise StackEmptyError("Stack is empty")
@@ -57,8 +59,9 @@ class Stack:
 
     def peek(self):
         """
-
-        :return:
+        Retrieves the value of the item at the top of the Stack
+        :return: The value of the last element
+        :raise: StackEmptyError if the Stack is empty at the moment of retrieval
         """
         if self.is_empty():
             raise StackEmptyError("Stack is empty")
@@ -68,9 +71,9 @@ class Stack:
 
     def search(self, item):
         """
-
-        :param item:
-        :return:
+        Look up an element is present in the Stack and returns its position
+        :param item: Element to search for
+        :return: The element index if exist or -1 if not
         """
         return self._items.index_of(item)
 

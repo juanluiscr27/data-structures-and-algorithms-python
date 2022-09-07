@@ -1,3 +1,5 @@
 #Config Files
+workspace.xml
+tasks.xml
 *.xml
-*.idea
+.idea

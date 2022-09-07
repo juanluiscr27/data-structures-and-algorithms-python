@@ -17,7 +17,7 @@ class ArrayList:
 
     def is_empty(self):
         """
-        Check if the ArrayList has elements or is empty
+        Check if the ArrayList has no elements
         :return: True if the ArrayList size is 0, otherwise False
         """
         return self.size == 0
