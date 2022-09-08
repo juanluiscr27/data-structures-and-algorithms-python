@@ -69,7 +69,7 @@ class Stack:
             raise StackEmptyError("Stack is empty")
 
         last_item = self._items.get(self.top)
-        return last_item.value
+        return last_item
 
     def search(self, item):
         """

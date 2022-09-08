@@ -12,8 +12,8 @@ class Queue:
 
         self._items = LinkedList()
         self.capacity = size
-        self.front = -1
-        self.rear = -1
+        self.front = None
+        self.rear = None
 
     def __str__(self):
         return str(self._items)
@@ -24,14 +24,14 @@ class Queue:
         :return: True if the Queue front field is pointing to no item or front index is greater than rear.
         Otherwise False
         """
-        return self.front == -1 or self.front > self.rear
+        return self._items.size == 0
 
     def is_full(self):
         """
         Check if the Queue has filled its capacity
         :return: True if the Queue top field is pointing to the higher possible index, otherwise False
         """
-        return self.rear == self.capacity - 1
+        return self._items.size == self.capacity
 
     def enqueue(self, item):
         """
@@ -42,13 +42,8 @@ class Queue:
         """
         if self.is_full():
             raise QueueOverFlowError("Queue is full")
-        if self.front == -1:
-            self.front = 0
-            self.rear = 0
-        else:
-            self.rear += 1
 
-        self._items.add_at(self.rear, item)
+        self._items.add_last(item)
 
     def dequeue(self):
         """
@@ -60,26 +55,21 @@ class Queue:
         if self.is_empty():
             raise QueueEmptyError("Queue is empty")
 
-        last_item = self.peek()
-        self._items.remove_last()
-        if self.is_full() and self.rear == self.front:
-            self.front = -1
-            self.rear = -1
-        else:
-            self.front += 1
-        return last_item
+        first_item = self.peek()
+        self._items.remove_first()
+        return first_item
 
     def peek(self):
         """
-        Retrieves the value of the item at the top of the Queue
-        :return: The value of the last element
+        Retrieves the value of the item at the front of the Queue
+        :return: The value of the first element
         :raise: QueueEmptyError if the Queue is empty at the moment of retrieval
         """
         if self.is_empty():
             raise QueueEmptyError("Queue is empty")
 
-        last_item = self._items.get(self.rear)
-        return last_item.value
+        first_item = self._items.get(0)
+        return first_item
 
     def search(self, item):
         """

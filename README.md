@@ -197,7 +197,7 @@ last element has a linear time complexity `O(n)`.
 
 ### Queues
 Queue is an abstract data structure that is open at both ends, rear and front. One end is always used 
-to insert data and the other is used to remove data. Queue follows First-In-First-Out principle.
+to insert data and the other is used to remove data. Queue follows First-In-First-Out (FIFO) principle.
 
 Queues maintain two data pointers, *front* points to the element at the head of the queue and *rear* points
 to the tail item. Putting items in the queue is called *enqueue*, and removing items from the queue is 

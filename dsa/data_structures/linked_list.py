@@ -71,11 +71,11 @@ class LinkedList:
         :param value: Value of the Node
         :raise: IndexError if the given index is not in the range of the LinkedList
         """
-        if self.is_empty() or 0 > index or index > self.size:
-            raise IndexError("LinkedList index out of range")
         if index == 0:
             self.add_first(value)
             return
+        if self.is_empty() or 0 > index or index > self.size:
+            raise IndexError("LinkedList index out of range")
         if index == self.size:
             self.add_last(value)
             return
@@ -262,9 +262,9 @@ class LinkedList:
         if self.is_empty() or 0 > index or index >= self.size:
             raise IndexError("LinkedList index out of range")
         if index == 0:
-            return self._head
+            return self._head.value
         if index == self.size - 1:
-            return self._tail
+            return self._tail.value
 
         counter = 0
         current_node = self._head
