@@ -24,14 +24,14 @@ class Queue:
         :return: True if the Queue front field is pointing to no item or front index is greater than rear.
         Otherwise False
         """
-        return self.front == -1 and self.rear == -1
+        return self.front == -1 or self.front > self.rear
 
     def is_full(self):
         """
         Check if the Queue has filled its capacity
         :return: True if the Queue top field is pointing to the higher possible index, otherwise False
         """
-        return self.rear == self.capacity - 1 or self.front > self.rear
+        return self.rear == self.capacity - 1
 
     def enqueue(self, item):
         """
@@ -42,7 +42,7 @@ class Queue:
         """
         if self.is_full():
             raise QueueOverFlowError("Queue is full")
-        if self.is_empty():
+        if self.front == -1:
             self.front = 0
             self.rear = 0
         else:
@@ -62,7 +62,11 @@ class Queue:
 
         last_item = self.peek()
         self._items.remove_last()
-        self.front += 1
+        if self.is_full() and self.rear == self.front:
+            self.front = -1
+            self.rear = -1
+        else:
+            self.front += 1
         return last_item
 
     def peek(self):
