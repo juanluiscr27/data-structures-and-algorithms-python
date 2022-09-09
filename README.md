@@ -95,7 +95,8 @@ all elements.
 Arrays are defined as the collection of items with same data types stored at contiguous memory locations.
 Each item stored in an array is called an *element*. Each location of an element in an array has a 
 numerical value which is used to identify the element, and we call it *index*. Each data element in an 
-Array can be randomly accessed by using its index number.
+Array can be randomly accessed by using its index number fast. However, adding or inserting new data at a
+specific location in an Array carries high costs.
 
 Arrays are useful because:
 * Searching a value in an array is easier.
