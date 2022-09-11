@@ -1,7 +1,7 @@
 
 class Queue:
     """
-    This code defines a Simple Queue class implemented with Linked list and a limit capacity
+    This code defines a Simple Queue class implemented using Linked list with limit capacity
     :param size: Max size of the Queue
     """
 
@@ -66,14 +66,14 @@ class Queue:
     def is_full(self):
         """
         Check if the Queue has filled its capacity
-        :return: True if the Queue top field is pointing to the higher possible index, otherwise False
+        :return: True if the Queue size field equals the Queue capacity, otherwise False
         """
         return self.size == self.capacity
 
     def enqueue(self, item):
         """
-        Inserts an element at the end of the Queue
-        Inserts a new element with constant O(1) time complexity
+        Inserts an element at the end of the Queue (The tail of the Linked list).
+        Adds the new item with constant O(1) time complexity
         :param item: element to insert
         :raise: QueueOverFlowError if the Queue is full at the moment of insertion
         """
@@ -93,8 +93,8 @@ class Queue:
 
     def dequeue(self):
         """
-        Retrieves and removes the element at the front of the Queue
-        Removes the last element with constant O(1) time complexity
+        Retrieves and removes the element at the front of the Queue (The head of the Linked list).
+        Removes the first element with constant O(1) time complexity
         :return: The item removed
         :raise: QueueEmptyError if the Queue is empty at the moment of deletion
         """
@@ -109,7 +109,7 @@ class Queue:
     def peek(self):
         """
         Retrieves the value of the item at the front of the Queue
-        Access the last element with constant O(1) time complexity
+        Access the first element with constant O(1) time complexity
         :return: The value of the first element
         :raise: QueueEmptyError if the Queue is empty at the moment of retrieval
         """

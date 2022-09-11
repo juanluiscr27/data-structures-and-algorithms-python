@@ -1,9 +1,7 @@
-from dsa.data_structures.linked_list import LinkedList
-
 
 class Stack:
     """
-    This code defines a Stack class implemented with Linked list and a limit capacity
+    This code defines a Stack class implemented using Linked list and with limit capacity
     :param size: Max size of the Stack
     """
 
@@ -67,14 +65,14 @@ class Stack:
     def is_full(self):
         """
         Check if the Stack has filled its capacity
-        :return: True if the Stack top field is pointing to the higher possible index, otherwise False
+        :return: True if the Stack top field equals the Queue capacity, otherwise False
         """
         return self.size == self.capacity
 
     def push(self, item):
         """
-        Inserts an element at the top of the Stack
-        Inserts a new element with constant O(1) time complexity
+        Inserts an element at the top of the Stack (The head of the Linked list).
+        Inserts the new item with constant O(1) time complexity
         :param item: element to insert
         :raise: StackOverFlowError if the Stack is full at the moment of insertion
         """
@@ -88,7 +86,7 @@ class Stack:
 
     def pop(self):
         """
-        Removes the element at the top of the Stack
+        Removes the element at the top of the Stack (The head of the Linked list).
         Removes the last element with constant O(1) time complexity
         :return: The item removed
         :raise: StackEmptyError if the Stack is empty at the moment of deletion
