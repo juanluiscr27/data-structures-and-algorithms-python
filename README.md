@@ -232,16 +232,33 @@ are constant `O(1)`. Even though, the space complexity of linked representation 
 elements is `O(n)`.
 
 ### Strings
+Strings are not a data structure, they are a data type. But strings are a data type that are stored in data 
+structure. Strings are defined as an array of characters. The difference between a character array and a 
+string is the string is terminated with a special character `\0`. 
 
-### Sets
+`\0` represents the end of the string. It is also referred as String terminator or Null Character. 
+Normally, strings are surrounded double quotation marks.
 
-### Maps
+As strings are collection of characters, therefore they have length to indicate the size of the string. 
+Strings also have indexes to indicate the location of each character, so that we could easily find out 
+some character. The index of the position start with 0 as in the array data structure. We could get access 
+to any character by using a bracket and the index of the position.
+
+As number are part of the char set, numbers can also be expressed as strings. However, Strings can not be 
+used in the mathematical operations. In some languages strings are represented as primitive data types and 
+others as class of immutable objects.
 
 ### Hash Tables
 
 ### Graphs
 
 ### Trees
+
+### Tries
+
+### Sets
+
+### Maps
 
 ### Heaps
 
