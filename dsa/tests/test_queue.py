@@ -1,4 +1,4 @@
-# Linked L=list Data Structure and algorithms with Python
+# Queue Data Structure and algorithms with Python
 from dsa.data_structures.queue import Queue
 
 

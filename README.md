@@ -274,9 +274,9 @@ Access of data becomes very fast if we know the index of the desired data. To un
 we need to know first what hashing is.
 
 #### Hash Function
-Hashing is a technique to generate an index of an array using some keys. A Hash function `h` assigns each 
-value with a unique index. Using the hash function, we can calculate the address at which the value can be 
-stored.
+Hashing is a technique to generate an integer value from a given key. A Hash function `h` maps a unique 
+index with an arbitrary value. Using the hash function, we can calculate at constant time the address at 
+which the value can be stored in an Array.
 
 The main idea behind the hashing is to create the (key/value) pairs. If the key is given, then the algorithm 
 computes the index at which the value would be stored. It can be written as `index = hash(key)`. So, a Hash

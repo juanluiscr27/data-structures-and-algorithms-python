@@ -1,4 +1,4 @@
-# Linked L=list Data Structure and algorithms with Python
+# Stack Data Structure and algorithms with Python
 from dsa.data_structures.stack import Stack
 
 
