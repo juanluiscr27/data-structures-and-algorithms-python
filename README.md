@@ -249,6 +249,93 @@ used in the mathematical operations. In some languages strings are represented a
 others as class of immutable objects.
 
 ### Hash Tables
+A Hash Table is an abstract data structure which stores data in an associative manner. Hash Table maps 
+keys to value and uses a hash function to compute an index, into an array of buckets, from which the 
+desired value can be stored or retrieved.
+
+Following are the basic primary operations of a hash table:
+* **Search** − Searches an element in a hash table.
+* **Insert** − Inserts an element in a hash table.
+* **Delete** − Deletes an element from a hash table.
+
+Hash Table provides constant time `O(1)` for searching, insertion and deletion operations on average. 
+Contrary, Hash Tables collisions are practically not be avoided for large set of possible keys. Hash Tables 
+are inefficient when there are many collisions.
+
+Hash tables are implemented where
+* Constant time lookup and insertion is required
+* Associative arrays
+* Cryptographic applications
+* Database indexing
+* Hash tables can be used in the implementation of set data structure
+
+In a hash table, data is stored in an array format, where each data value has its own unique index value. 
+Access of data becomes very fast if we know the index of the desired data. To understand better a Hash Table
+we need to know first what hashing is.
+
+#### Hash Function
+Hashing is a technique to generate an index of an array using some keys. A Hash function `h` assigns each 
+value with a unique index. Using the hash function, we can calculate the address at which the value can be 
+stored.
+
+The main idea behind the hashing is to create the (key/value) pairs. If the key is given, then the algorithm 
+computes the index at which the value would be stored. It can be written as `index = hash(key)`. So, a Hash
+function takes a key, convert it to some sort of integers and then, remaps that hash code to an index.
+
+A good hash function may not prevent the collisions completely however it can reduce the number of 
+collisions. A has function should always produce the same result when passing the same input. A hash function
+need to be fast. The hash function result should be as much random as possible.
+
+A Hashtable has two main parameters that may affect its performance, initial capacity and load factor. The 
+*capacity* `M` is the number of buckets in the hash table, and the initial capacity is simply the capacity 
+at the time the hash table is created. The *load factor* `a` is a measure of how full the hash table is 
+allowed to get before its capacity is automatically increased. Load factor `a = n/M`, where `n` is the 
+number of entries occupied in the hash table.
+
+There are several algorithms for hashing integers indexes from a given key. The most common methods are:
+* **Division method** - A standard technique is to use a modulo function on the key, by selecting a divisor 
+`M` which is a prime number close to the table size, so `h(k) = k Mod M`.
+* **Folding method** - A folding hash code is produced by dividing the input into n sections of m bits, 
+where 2^m is the table size.
+* **Mid-square method** - A mid-squares hash code is produced by squaring the input and extracting an 
+appropriate number of middle digits or bits.
+* **Multiplication method** - Standard multiplicative hashing uses the formula `h(k) = floor(m (k A Mod 1))`.
+
+A perfect hash function is one that maps each different key to a distinct integer to the table such that 
+no two search keys hashes to the same array index.
+
+#### Collision
+A hash collision is when the hash function generates the same index for multiple keys. This produce a 
+conflict on what value to be stored in that index. While the goal of a hash function is to minimize 
+collisions, some collisions are unavoidable in practice. The second part of the hashing algorithm is 
+collision resolution.
+
+To resolve hashing collisions we can use one of the following techniques:
+* **Closed Addressing:** A key is always stored in the bucket it's hashed to. Collisions are dealt with 
+  using separate data structures on a per-bucket basis. It stores arbitrary number of keys per bucket. It 
+  is also known as Open Hashing.
+* **Open Addressing:** With this method a hash collision is resolved by probing, or searching through 
+  alternative locations in the array until the target record is found. At most, it stores one key per 
+  bucket. It is also known as Closed Hashing.
+
+#### Closed Addressing
+Separate chaining using Linked lists is the common closed addressing collision resolution method. In 
+separate chaining, the process involves building a linked list with key–value pair for each search array 
+index. The collided items are chained together through a single linked list, which can be traversed to 
+access the item with a unique search key. 
+
+#### Open Addressing
+In Open Addressing every entry records are stored in the bucket array itself, and the hash resolution is 
+performed through probing. When a new entry has to be inserted, the buckets are examined, starting with 
+the hashed-to slot and proceeding in some probe sequence, until an unoccupied slot is found. When searching 
+for an entry, the buckets are scanned in the same sequence, until either the target record is found, or an 
+unused array slot is found.
+
+Different techniques used in open addressing are:
+* Linear probing, in which the interval between probes is fixed (usually 1).
+* Quadratic probing, in which the interval between probes is increased by adding the successive outputs of 
+  a quadratic polynomial to the value given by the original hash computation.
+* Double hashing, in which the interval between probes is computed by a secondary hash function.
 
 ### Graphs
 
