@@ -22,7 +22,7 @@ Big O Notation is a mathematical definition that describes the performance of an
 worst case scenario for the size of its argument. Big O refers to Order of magnitude of complexity 
 (time or space) to measure the efficiency of an algorithm as its input data size grows.
 
-Time complexity in computer terms indicates the run time an algorithm require to complete a
+Time complexity in computer terms indicates the runtime an algorithm require to complete a
 certain task. On the oder hand, space complexity refers to amount memory required by such algorithm.
 
 Common values of algorithm complexity are, starting from the most efficient:
@@ -353,7 +353,10 @@ Different techniques used in open addressing are:
 
 Correctness
 
-Efficiency: Time Complexity, Space Complexity
+Efficiency: Time Complexity, refers to the relationship between the growth of input size of an algorithm and 
+the growth of the operations executed.
+
+Space Complexity
 
 ### Search
 

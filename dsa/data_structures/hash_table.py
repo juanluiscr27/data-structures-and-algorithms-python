@@ -113,6 +113,9 @@ class HashTable:
         return index
 
     def rehash(self):
+        """
+        Increases the capacity of the hashtable by 100% and internally reorganizes all its elements.
+        """
         self.capacity = self.get_next_prime(self.capacity * 2)
         old_array = self._array
         self.clear()
@@ -123,10 +126,21 @@ class HashTable:
                 current_node = current_node.next
 
     def clear(self):
+        """
+        Clears the hashtable so that it contains no elements.
+        """
         self._array = [None for _ in range(self.capacity)]
         self.size = 0
 
     def put(self, key, value):
+        """
+        Maps the specified key to the specified value in the hashtable.
+        Neither the key nor the value can be null. Deals with collisions using separate chaining.
+        This method automatically calls for rehashing when the number of elements in the
+        hashtable exceeds the load factor
+        :param key: The element key
+        :param value: The element value
+        """
         if key is None or value is None:
             return
         if self.size / self.capacity > self.load_factor:
@@ -144,6 +158,12 @@ class HashTable:
         self.size += 1
 
     def get(self, key):
+        """
+        Returns the value of the specified key, or None if the Hash Table contains no
+        mapping for the key
+        :param key: The given key
+        :return: The value that maps the given key
+        """
         index = self.hash(key)
         current_node = self._array[index]
         while current_node:
@@ -154,6 +174,12 @@ class HashTable:
         return None
 
     def remove(self, key):
+        """
+        Removes the key and its corresponding value from the hashtable
+        :param key: The given key
+        :return: The value that maps the key
+        :raise KeyError: If the key is not in the hashtable
+        """
         index = self.hash(key)
         previous_node = None
         current_node = self._array[index]
@@ -176,6 +202,13 @@ class HashTable:
         raise KeyError("No such key found in Hash Table")
 
     def replace(self, key, value):
+        """
+        Replaces the value for the specified key only if it is correctly mapped to
+        some key in the Hash Table
+        :param key: The given key
+        :param value: The new value to store in the Hash Table
+        :return: True if matching key was found and the value replaced. Otherwise False
+        """
         index = self.hash(key)
         current_node = self._array[index]
         while current_node:
@@ -187,6 +220,10 @@ class HashTable:
         return False
 
     def keys(self):
+        """
+        Returns an enumeration of the keys in this hashtable.
+        :return: All the keys in the Hash Table
+        """
         keys = []
         for bucket in self._array:
             current_node = bucket
@@ -197,6 +234,10 @@ class HashTable:
         return keys
 
     def values(self):
+        """
+        Returns an enumeration of the values in this hashtable
+        :return: All the values in the Hash Table
+        """
         values = []
         for bucket in self._array:
             current_node = bucket
