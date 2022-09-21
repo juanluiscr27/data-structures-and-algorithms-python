@@ -53,8 +53,7 @@ class HashTable:
         for bucket in self._array:
             current_node = bucket
             while current_node:
-                if current_node.key:
-                    hash_table += f"'{current_node.key}': {current_node.value}, "
+                hash_table += f"'{current_node.key}': {current_node.value}, "
                 current_node = current_node.next
 
         return f"{{{hash_table[:-2]}}}"
@@ -120,24 +119,24 @@ class HashTable:
         for bucket in old_array:
             current_node = bucket
             while current_node:
-                if current_node.key:
-                    self.put(current_node.key, current_node.value)
+                self.put(current_node.key, current_node.value)
                 current_node = current_node.next
 
     def clear(self):
-        self._array = [self.Node(None, None) for _ in range(self.capacity)]
+        self._array = [None for _ in range(self.capacity)]
         self.size = 0
 
     def put(self, key, value):
+        if key is None or value is None:
+            return
         if self.size / self.capacity > self.load_factor:
             self.rehash()
-
         if self.replace(key, value):
             return
 
         index = self.hash(key)
         new_node = self.Node(key, value)
-        if not self._array[index].key:
+        if not self._array[index]:
             self._array[index] = new_node
         else:
             new_node.set_next(self._array[index])
@@ -154,8 +153,27 @@ class HashTable:
             current_node = current_node.next
         return None
 
-    def remove(self):
-        pass
+    def remove(self, key):
+        index = self.hash(key)
+        previous_node = None
+        current_node = self._array[index]
+        while current_node:
+            if current_node.key == key and not previous_node:
+                value = current_node.value
+                next_node = current_node.remove_next()
+                self._array[index] = next_node
+                self.size -= 1
+                return value
+            if current_node.key == key and previous_node:
+                value = current_node.value
+                next_node = current_node.remove_next()
+                previous_node.set_next(next_node)
+                self.size -= 1
+                return value
+            previous_node = current_node
+            current_node = current_node.next
+
+        raise KeyError("No such key found in Hash Table")
 
     def replace(self, key, value):
         index = self.hash(key)
@@ -173,8 +191,7 @@ class HashTable:
         for bucket in self._array:
             current_node = bucket
             while current_node:
-                if current_node.key:
-                    keys.append(current_node.key)
+                keys.append(current_node.key)
                 current_node = current_node.next
 
         return keys
@@ -184,8 +201,7 @@ class HashTable:
         for bucket in self._array:
             current_node = bucket
             while current_node:
-                if current_node.key:
-                    values.append(current_node.value)
+                values.append(current_node.value)
                 current_node = current_node.next
 
         return values

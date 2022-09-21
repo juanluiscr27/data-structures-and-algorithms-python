@@ -21,15 +21,17 @@ def test_hash_table():
     print(my_hash_table.values())
     key = "Jimmy"
     print(f"{key} = {my_hash_table.get(key)}")
-    # # my_hash_table.put("Tim", 20)
-    # print(f"Search 10: {my_hash_table.get(10)}")
-    # my_hash_table.remove()
-    # my_hash_table.remove()
-    # my_hash_table.remove()
-    # my_hash_table.remove()
-    # print(f"Item popped: {my_hash_table.remove()}")
-    # # my_hash_table.remove()
-    # print(f"Hash Table is empty: {my_hash_table.is_empty()}")
+    my_hash_table.put("Tim", 20)
+    print(f"Search Tom: {my_hash_table.get('Tom')}")
+    my_hash_table.remove("Ada")
+    my_hash_table.remove("Jimmy")
+    my_hash_table.remove("Tim")
+    my_hash_table.remove("Lucy")
+    print(f"Item removed: {my_hash_table.remove('Zoe')}")
+    my_hash_table.remove("Max")
+    # my_hash_table.remove("Tom")
+    print(my_hash_table)
+    print(f"Hash Table is empty: {my_hash_table.is_empty()}")
 
 
 if __name__ == '__main__':
