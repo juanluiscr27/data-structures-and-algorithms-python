@@ -395,7 +395,15 @@ of a Binary Tree consists of three items:
 corresponds to an ordered tree in graph theory. 
 
 ##### Binary Search Tree
+A Binary Search Tree follows specific order to arrange the elements.  Binary Search Tree (BST) is a 
+subtype of binary tree that is organised in such a way that it allows for faster searching, lookup, and 
+addition/removal of data. It is called a Binary Tree because each tree node has a maximum of two children.
+And it is called a Search Tree because of its properties to search for a value in order of `O(log n)` time.
 
+A Binary Search Tree is governed by the following arrangement rules:
+1. All nodes of left subtree are less than the root node.
+2. All nodes of right subtree are more than the root node.
+3. Both subtrees of each node are also BSTs, they fulfill the above two properties.
 
 ##### AVL Tree
 
