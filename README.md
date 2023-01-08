@@ -406,6 +406,20 @@ A Binary Search Tree is governed by the following arrangement rules:
 3. Both subtrees of each node are also BSTs, they fulfill the above two properties.
 
 ##### AVL Tree
+The Adelson-Velsky-Landis (AVL) Tree can be defined as height balanced binary search tree in which each 
+node is associated with a *balance factor* which is calculated by subtracting the *height* of its right 
+subtree from that of its left subtree. AVL Tree checks the height of the left and the right subtrees and 
+assures that the difference is not more than 1. This difference is called the balance factor.
+
+As Binary Search Tree worst-case performance is closest to linear search algorithms, that is `Ο(n)`. In 
+real-time applications, we cannot predict data pattern and their frequencies. So, a need arises to balance 
+out the existing BST. 
+
+To balance itself, an AVL Tree may perform the following four kinds of operations:
+- Left rotation 
+- Right rotation
+- Left-Right rotation
+- Right-Left rotation
 
 ##### B Tree
 
