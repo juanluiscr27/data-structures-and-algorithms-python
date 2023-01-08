@@ -345,8 +345,8 @@ sequential manner. They are hierarchical structures because the elements in a Tr
 levels.
 
 In the Tree data structure, the topmost node is known as a *root node*. Each node contains some data and 
-the link or reference of other nodes, they are called *children*. The connecting link between the two nodes
-is called *edge*.
+the link or reference of other nodes, they are called *children*. The connecting links between nodes
+is called *edges*. Endpoints that have no children nodes are known as ‘leaf’ nodes.
 
 Each node in the tree can be connected to many children (depending on the type of tree), but must be 
 connected to only one *parent*, except for the root node, which has no parent. Based on these constraints, 
@@ -372,21 +372,30 @@ The basic operations that can be performed on a binary search tree data structur
 
 #### Advantages of Trees
 
-The Tree data structures allow quicker and easier access to the data as it is a non-linear data structure.
-Other data structures such as arrays, linked list, stack, and queue are linear data structures that store 
-data sequentially. In order to perform any operation in a linear data structure, the time complexity 
-increases with the increase in the data size. 
+The Tree data structures allow quicker and easier access to the data as it is a non-linear data structure. 
+This allows for a faster response time during a search as well as greater convenience during the design 
+process. Other data structures such as arrays, linked list, stack, and queue are linear data structures 
+that store data sequentially. In order to perform any operation in a linear data structure, the time 
+complexity increases with the increase in the data size. 
 
 #### Types of Trees
-
+A *General Tree* is characterised by the lack of any configuration or limitations on the number of children 
+a node can have. Any tree with a hierarchical structure can be described as a general tree. A node can 
+have any number of children, and the tree’s orientation can be any combination of these. The degree of the 
+nodes can range from 0 to n.
 
 ##### Binary Tree
-A *Binary trees* are a commonly used type, which constrain the number of children for each parent to exactly 
-two. When the order of the children is specified, this data structure corresponds to an ordered tree in 
-graph theory. A value or pointer to other data may be associated with every node in the tree, or sometimes 
-only with the leaf nodes, which have no children.
+A Binary Tree is a tree data structure in which each parent node can have at most two children. Each node 
+of a Binary Tree consists of three items: 
+- Data item
+- Address of left child
+- Address of right child
+
+*Binary trees* are a commonly used type and when the order of the children is specified, this data structure 
+corresponds to an ordered tree in graph theory. 
 
 ##### Binary Search Tree
+
 
 ##### AVL Tree
 
