@@ -267,7 +267,7 @@ Hash tables are implemented where
 * Associative arrays
 * Cryptographic applications
 * Database indexing
-* Hash tables can be used in the implementation of set data structure
+* Hash tables can be used in the implementation of Set data structure
 
 In a hash table, data is stored in an array format, where each data value has its own unique index value. 
 Access of data becomes very fast if we know the index of the desired data. To understand better a Hash Table
@@ -337,9 +337,22 @@ Different techniques used in open addressing are:
   a quadratic polynomial to the value given by the original hash computation.
 * Double hashing, in which the interval between probes is computed by a secondary hash function.
 
-### Graphs
-
 ### Trees
+A tree data structure is defined as a collection of objects or entities known as *nodes* that are linked 
+together to represent hierarchy. Trees are a non-linear data structure because they do not store data in a 
+sequential manner. They are hierarchical structures because the elements in a Tree are arranged in multiple 
+levels.
+
+In the Tree data structure, the topmost node is known as a *root node*. Each node contains some data and 
+the link or reference of other nodes, they are called *children*. Each node in the tree can be connected to 
+many children (depending on the type of tree), but must be connected to only one *parent*, except for the 
+root node, which has no parent. Based on these constraints, no node can be its own ancestor. But, also each 
+child can be treated like the root node of its own subtree, making recursion a useful technique for working
+on trees.
+
+
+
+### Graphs
 
 ### Tries
 
@@ -358,6 +371,8 @@ the growth of the operations executed.
 
 Space Complexity
 
+## Algorithms
+
 ### Search
 
 ### Sort
@@ -373,5 +388,3 @@ Space Complexity
 ### Tree Traversal
 
 ### Dynamic Programming
-
-### Hashing
