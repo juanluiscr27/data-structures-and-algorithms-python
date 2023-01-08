@@ -251,7 +251,8 @@ others as class of immutable objects.
 ### Hash Tables
 A Hash Table is an abstract data structure which stores data in an associative manner. Hash Table maps 
 keys to value and uses a hash function to compute an index, into an array of buckets, from which the 
-desired value can be stored or retrieved.
+desired value can be stored or retrieved. Hash tables are the most frequently used implementation of 
+a Map or Dictionary data type, in this case is with an array combined with a hash function.
 
 Following are the basic primary operations of a hash table:
 * **Search** − Searches an element in a hash table.
@@ -387,15 +388,16 @@ only with the leaf nodes, which have no children.
 
 ##### Binary Search Tree
 
-AVL Tree
+##### AVL Tree
+
+##### B Tree
+
 
 ### Graphs
 
 ### Tries
 
 ### Sets
-
-### Maps
 
 ### Heaps
 
