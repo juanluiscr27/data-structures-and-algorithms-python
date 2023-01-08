@@ -350,7 +350,21 @@ root node, which has no parent. Based on these constraints, no node can be its o
 child can be treated like the root node of its own subtree, making recursion a useful technique for working
 on trees.
 
+#### Trees Basic Operations 
 
+The basic operations that can be performed on a binary search tree data structure, are the following:
+
+* *Insert* − Inserts an element in a tree/create a tree.
+* *Delete* − Removes an element from a tree/delete a tree.
+* *Search* − Searches an element in a tree.
+* *Preorder Traversal* − Traverses a tree in a pre-order manner.
+* *Inorder Traversal* − Traverses a tree in an in-order manner.
+* *Postorder Traversal* − Traverses a tree in a post-order manner.
+
+A Binary trees are a commonly used type, which constrain the number of children for each parent to exactly 
+two. When the order of the children is specified, this data structure corresponds to an ordered tree in 
+graph theory. A value or pointer to other data may be associated with every node in the tree, or sometimes 
+only with the leaf nodes, which have no children.
 
 ### Graphs
 
