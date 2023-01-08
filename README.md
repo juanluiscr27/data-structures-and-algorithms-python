@@ -115,8 +115,8 @@ array.
 
 #### Advantages of Array
 - Array provides the single name for the group of variables of the same data type. 
-- Traversing an array is a very simple process; we just need to increment the base address of the array 
-in order to visit each element one by one.
+- Traversing an array is a very simple process; we just need to increment the base address of the array in 
+  order to visit each element one by one.
 - Any element in the array can be directly accessed by using the index.
 
 #### Disadvantages of Array
@@ -360,7 +360,6 @@ The following are common applications of tree data structures:
 - The tree data structure is also used to store the data in routing tables in the routers.
 
 #### Trees Basic Operations 
-
 The basic operations that can be performed on a binary search tree data structure, are the following:
 
 * *Insert* − Inserts an element in a tree/create a tree.
@@ -371,7 +370,6 @@ The basic operations that can be performed on a binary search tree data structur
 * *Postorder Traversal* − Traverses a tree in a post-order manner.
 
 #### Advantages of Trees
-
 The Tree data structures allow quicker and easier access to the data as it is a non-linear data structure. 
 This allows for a faster response time during a search as well as greater convenience during the design 
 process. Other data structures such as arrays, linked list, stack, and queue are linear data structures 
@@ -447,6 +445,48 @@ A B-tree should contain the following properties:
 7. If `n ≥ 1`, then for any n-key B-tree of height h and minimum degree `t ≥ 2`, `h ≥ log t (n+1)/2`.
 
 ### Graphs
+A graph is a non-linear data structure that contains *vertices* and *edges*. A graph `G` is defined as a 
+collection of vertices and edges `G = {V, E}`, where `V` is the set of vertices (nodes) and `E` is the set 
+of edges that are used to connect these vertices. A graph can be seen as a cyclic tree, where the vertices 
+maintain any complex relationship among them, instead of having parent child relationship.  
+
+ Each node of the graph is represented as a vertex. In a Graph a vertex is said to be *adjacent* to another 
+ vertex if there is an edge connecting them. Edge represents a *path* between two vertices or a line between 
+ two vertices. Path represents a sequence of edges between the two vertices.
+
+A graph can be directed or undirected. In a directed graph, edges form an ordered pair. Edges represent a 
+specific path from some **vertex A** to another **vertex B**. Node **A** is called initial node while node 
+**B** is called terminal node. However, in an undirected graph, edges are not associated with the 
+directions with them. An undirected graph if an edge exists between vertex **A** and **B** then the vertices 
+can be traversed from **B** to **A** as well as **A** to **B**. 
+
+#### Common Applications of Graph:
+- Graphs are used to represent flow of control in computers.
+- Graphs are used in many social networking sites.
+- Graphs are used in maps applications to find the shortest route to a destination.
+- Graphs are also used in airlines system for effective route optimization. 
+- In transportation, graphs are used to find the shortest path.
+- In circuits, graphs can be used to represent electric components as nodes and wires as edges.
+- Graphs are used in computer networks for Peer to Peer (P2P) applications.
+
+#### Graphs Basic Operations 
+The most common graph operations are:
+* Graph Traversal - Visiting all the nodes of a graph.
+* Add - Add elements(vertex or edges) to the graph.
+* Remove - Remove elements(vertex or edges) from the graph.
+* Get - Returns the element associated with a value in the graph.
+* Path - Finding the path from one vertex to another.
+
+#### Advantages of Graph:
+- By using graphs we can easily find the shortest path, neighbors of the nodes, and many more.
+- Graphs are used to implement algorithms like Depth First Search (DFS) and Breadth First Search (BFS). 
+- It is used to find minimum spanning tree which has many practical applications.
+- It helps in organizing data.
+- As a non-linear structure, Graphs help in understanding complex problems and their visualization.
+
+#### Disadvantages of Graph:
+- Graphs use lots of pointers which can be complex to handle.
+- It can have large memory complexity.
 
 ### Tries
 
