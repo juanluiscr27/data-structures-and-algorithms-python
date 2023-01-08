@@ -344,11 +344,19 @@ sequential manner. They are hierarchical structures because the elements in a Tr
 levels.
 
 In the Tree data structure, the topmost node is known as a *root node*. Each node contains some data and 
-the link or reference of other nodes, they are called *children*. Each node in the tree can be connected to 
-many children (depending on the type of tree), but must be connected to only one *parent*, except for the 
-root node, which has no parent. Based on these constraints, no node can be its own ancestor. But, also each 
-child can be treated like the root node of its own subtree, making recursion a useful technique for working
-on trees.
+the link or reference of other nodes, they are called *children*. The connecting link between the two nodes
+is called *edge*.
+
+Each node in the tree can be connected to many children (depending on the type of tree), but must be 
+connected to only one *parent*, except for the root node, which has no parent. Based on these constraints, 
+no node can be its own ancestor. But, also each child can be treated like the root node of its own subtree, 
+making recursion a useful technique for working on trees.
+
+The following are common applications of tree data structures:
+- Trees are used to store the data in the hierarchical structure. For example, the file system.
+- It is used to implement other data structures as the Heaps.
+- Most popular databases use different variants of the tree structure to store and indexing their data.
+- The tree data structure is also used to store the data in routing tables in the routers.
 
 #### Trees Basic Operations 
 
@@ -361,10 +369,25 @@ The basic operations that can be performed on a binary search tree data structur
 * *Inorder Traversal* − Traverses a tree in an in-order manner.
 * *Postorder Traversal* − Traverses a tree in a post-order manner.
 
-A Binary trees are a commonly used type, which constrain the number of children for each parent to exactly 
+#### Advantages of Trees
+
+The Tree data structures allow quicker and easier access to the data as it is a non-linear data structure.
+Other data structures such as arrays, linked list, stack, and queue are linear data structures that store 
+data sequentially. In order to perform any operation in a linear data structure, the time complexity 
+increases with the increase in the data size. 
+
+#### Types of Trees
+
+
+##### Binary Tree
+A *Binary trees* are a commonly used type, which constrain the number of children for each parent to exactly 
 two. When the order of the children is specified, this data structure corresponds to an ordered tree in 
 graph theory. A value or pointer to other data may be associated with every node in the tree, or sometimes 
 only with the leaf nodes, which have no children.
+
+##### Binary Search Tree
+
+AVL Tree
 
 ### Graphs
 
