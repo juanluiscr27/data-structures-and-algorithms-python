@@ -394,6 +394,12 @@ of a Binary Tree consists of three items:
 *Binary trees* are a commonly used type and when the order of the children is specified, this data structure 
 corresponds to an ordered tree in graph theory. 
 
+In addition, there are son special types of Binary Tree as:
+- Full Binary Tree
+- Perfect Binary Tree
+- Complete Binary Tree
+- Balanced Binary Tree
+
 ##### Binary Search Tree
 A Binary Search Tree follows specific order to arrange the elements.  Binary Search Tree (BST) is a 
 subtype of binary tree that is organised in such a way that it allows for faster searching, lookup, and 
@@ -422,7 +428,23 @@ To balance itself, an AVL Tree may perform the following four kinds of operation
 - Right-Left rotation
 
 ##### B Tree
+B-tree is a special type of self-balancing search tree in which each node can contain more than one key 
+and can have more than two children. It is a generalized form of the binary search tree. It is also a 
+height-balanced m-way tree. 
 
+B-Tree is a data structures that sorts data in logarithmic time to allow for search, sequential access, 
+deletions, and insertions. A B-tree, unlike a binary tree, allows its nodes to have more than two children. 
+They can read and write larger blocks of data in databases and file systems.
+
+A B-tree should contain the following properties:
+1. For each node `x`, the keys are stored in increasing order.
+2. In each node, there is a boolean value `x.isLeaf` which is true if `x` is a leaf.
+3. If `n` is the order of the tree, each internal node can contain at most `n - 1` keys along with a pointer 
+   to each child. 
+4. Each node except root can have at most n children and at least `n/2` children.
+5. All leaves have the same depth (i.e. height-h of the tree).
+6. The root has at least 2 children and contains a minimum of 1 key.
+7. If `n ≥ 1`, then for any n-key B-tree of height h and minimum degree `t ≥ 2`, `h ≥ log t (n+1)/2`.
 
 ### Graphs
 
@@ -453,8 +475,10 @@ Space Complexity
 
 ### Delete
 
-### Graph Traversal
+### Recursion
 
 ### Tree Traversal
+
+### Graph Traversal
 
 ### Dynamic Programming
