@@ -489,6 +489,35 @@ The most common graph operations are:
 - It can have large memory complexity.
 
 ### Tries
+Trie is a tree-based data-structure that stores the set of strings in a sorted way. It has the number of 
+pointers equal to the number of characters of the alphabet in each node. It can search a word in the 
+dictionary with the help of the word's prefix. Assuming that all strings are formed from the letters 'a' 
+to 'z' in the English alphabet, each trie node can have a maximum of 26 points. The word "Trie" is an 
+excerpt from the word "retrieval". 
+
+Tries are sometimes Space-Efficient. If you're storing lots of words that start with similar patterns, tries 
+may reduce the overall storage cost by storing shared prefixes once. Efficient Prefix Queries. Tries can 
+quickly answer queries about words with shared prefixes, like: How many words start with "choco"?
+What's the most likely next letter in a word that starts with "strawber"? It provides an alphabetical 
+filter of entries by the key of the node. 
+
+Properties of the Trie for a set of the string:
+- The root node of the trie always represents the null node.
+- Each child of nodes is sorted alphabetically.
+- Each node can have a maximum of 26 children (A to Z).
+- Each node (except the root) can store one letter of the alphabet.
+
+Common applications of Trie data structure include: 
+* Spell Checker. Trie is used to store the word in dictionaries. The spell checker can easily be applied 
+  in the most efficient way by searching for words on a data structure. 
+* Auto-complete. It provides a simple way to find an alternative word to complete the word for the 
+  following reasons. 
+* Browser history. It is also used to complete the URL in the browser.
+
+#### Trie Basic Operations 
+* Insert
+* Search
+* Delete
 
 ### Sets
 
@@ -520,5 +549,9 @@ Space Complexity
 ### Tree Traversal
 
 ### Graph Traversal
+
+### Depth First Search
+
+### Breadth First Search
 
 ### Dynamic Programming
