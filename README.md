@@ -488,6 +488,47 @@ The most common graph operations are:
 - Graphs use lots of pointers which can be complex to handle.
 - It can have large memory complexity.
 
+### Sets
+A set is a data structure that can store any number of unique values without any particular order. Set’s 
+differ from arrays in the sense that they only allow non-repeated, unique values within them. Sets are a 
+computer implementation of the mathematical concept of a finite Set. 
+
+
+#### Set Basic Operations 
+One may define the operations of the algebra of sets as:
+* Union(S,T): returns the union of sets S and T.
+* Intersection(S,T): returns the intersection of sets S and T.
+* Difference(S,T): returns the difference of sets S and T.
+* Subset(S,T): a predicate that tests whether the set S is a subset of set T.
+* pick(S): returns an arbitrary element of S.
+* pop(S): returns an arbitrary element of S, deleting it from S.
+* add(S,x): adds the element x to S, if it is not present already.
+* remove(S, x): removes the element x from S, if it is present.
+
+Sets can be implemented using various data structures, which provide different time and space trade-offs 
+for various operations. A simple implementation is to use a list, ignoring the order of the elements and 
+taking care to avoid repeated values. This is simple but inefficient, as operations like set membership or 
+element deletion are `O(n)`, as they require scanning the entire list. Sets are often instead implemented 
+using more efficient data structures, like various flavors of trees, tries, or hash tables.  
+
+As sets can be interpreted as a kind of map. These are commonly implemented in the same way as partial maps 
+(associative arrays), in this case in which the value of each key-value pair use the same value. This 
+implementation with hash table offers a `O(1)` time complexity on average-case, but `O(n)` worst-case, for 
+most operations on unsorted sets. The self-balancing binary search tree implementation for set sorted sets 
+has `O(log n)` for most operations.
+
+#### Advantages of Set:
+* Set can be used to store unique values in order to avoid duplications of elements present in the set.
+* Elements in a set are stored in a sorted fashion which makes it efficient.
+* Set are dynamic, so there is no error of overflowing of the set.
+* Searching operation takes O(logN) time complexity.
+
+Realtime Applications of Set:
+- Set are used in the music player app to list all the songs in proper order.
+- Set are used to determine the distinct values in an array.
+- Set are used to detect cycles in a Linked List.
+- Sets are used in various database operations such as performing.
+
 ### Tries
 Trie is a tree-based data-structure that stores the set of strings in a sorted way. It has the number of 
 pointers equal to the number of characters of the alphabet in each node. It can search a word in the 
@@ -518,8 +559,6 @@ Common applications of Trie data structure include:
 * Insert
 * Search
 * Delete
-
-### Sets
 
 ### Heaps
 
