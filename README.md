@@ -493,18 +493,6 @@ A set is a data structure that can store any number of unique values without any
 differ from arrays in the sense that they only allow non-repeated, unique values within them. Sets are a 
 computer implementation of the mathematical concept of a finite Set. 
 
-
-#### Set Basic Operations 
-One may define the operations of the algebra of sets as:
-* Union(S,T): returns the union of sets S and T.
-* Intersection(S,T): returns the intersection of sets S and T.
-* Difference(S,T): returns the difference of sets S and T.
-* Subset(S,T): a predicate that tests whether the set S is a subset of set T.
-* pick(S): returns an arbitrary element of S.
-* pop(S): returns an arbitrary element of S, deleting it from S.
-* add(S,x): adds the element x to S, if it is not present already.
-* remove(S, x): removes the element x from S, if it is present.
-
 Sets can be implemented using various data structures, which provide different time and space trade-offs 
 for various operations. A simple implementation is to use a list, ignoring the order of the elements and 
 taking care to avoid repeated values. This is simple but inefficient, as operations like set membership or 
@@ -516,6 +504,17 @@ As sets can be interpreted as a kind of map. These are commonly implemented in t
 implementation with hash table offers a `O(1)` time complexity on average-case, but `O(n)` worst-case, for 
 most operations on unsorted sets. The self-balancing binary search tree implementation for set sorted sets 
 has `O(log n)` for most operations.
+
+#### Set Basic Operations 
+One may define the operations of the algebra of sets as:
+* Union(S,T): returns the union of sets S and T.
+* Intersection(S,T): returns the intersection of sets S and T.
+* Difference(S,T): returns the difference of sets S and T.
+* Subset(S,T): a predicate that tests whether the set S is a subset of set T.
+* pick(S): returns an arbitrary element of S.
+* pop(S): returns an arbitrary element of S, deleting it from S.
+* add(S,x): adds the element x to S, if it is not present already.
+* remove(S, x): removes the element x from S, if it is present.
 
 #### Advantages of Set:
 * Set can be used to store unique values in order to avoid duplications of elements present in the set.
@@ -561,7 +560,34 @@ Common applications of Trie data structure include:
 * Delete
 
 ### Heaps
+Heap is a special case of balanced binary tree data structure where the root-node key is compared with its 
+children and arranged accordingly. A heap is a **complete binary tree**, and the binary tree is a tree in 
+which the node can have utmost two children. A complete binary tree is a binary tree in which all the 
+levels except the last level, i.e., leaf node should be completely filled, and all the nodes should be 
+left-justified. 
 
+Heap data structure must satisfy the heap property, where any given node is
+- Always greater than its child node/s and the key of the root node is the largest among all other nodes. 
+  This property is also called max heap.
+- Always smaller than the child node/s and the key of the root node is the smallest among all other nodes. 
+  This property is also called min heap.
+
+The total number of comparisons required in the max heap is according to the height of the tree. The 
+height of the complete binary tree is always `log n`; therefore, the time complexity would also be `O(log 
+n)`. The heap is one maximally efficient implementation of an abstract data type called a priority queue.
+
+#### Heap Basic Operations
+* **Insert** - Insert Element into Heap.
+* **Delete** - Delete Element from Heap.
+* **Peek** - Peek operation returns the maximum element from Max Heap or minimum element from Min Heap.
+* **Extract** - Extract-Max returns the node with maximum value after removing it from a Max Heap whereas 
+  Extract-Min returns the node with minimum after removing it from Min Heap. 
+
+The heap data structure has many applications.
+- Heapsort: One of the best sorting methods being in-place and with no quadratic worst-case scenarios.
+- Selection algorithms: A heap allows access to the min or max element in constant time, and other 
+  selections (such as median or kth-element) can be done in sublinear time on data that is in a heap
+- Priority Queue: A priority queue is an abstract concept like "a list" and can be implemented with a heap.
 ## Algorithms
 
 Correctness
