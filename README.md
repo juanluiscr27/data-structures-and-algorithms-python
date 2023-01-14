@@ -588,7 +588,23 @@ The heap data structure has many applications.
 - Selection algorithms: A heap allows access to the min or max element in constant time, and other 
   selections (such as median or kth-element) can be done in sublinear time on data that is in a heap
 - Priority Queue: A priority queue is an abstract concept like "a list" and can be implemented with a heap.
+- 
 ## Algorithms
+An algorithm is a set of well-defined instructions to solve a particular problem. It takes a set of inputs 
+and produces the desired output.  The formal definition of an algorithm is that it contains the finite set 
+of instructions which are being carried in a specific order to perform the specific task. 
+
+The following are the characteristics of an algorithm:
+* Input: An algorithm has some input values. We can pass 0 or some input value to an algorithm.
+* Output: We will get 1 or more output at the end of an algorithm.
+* Unambiguity: An algorithm should be unambiguous which means that the instructions in an algorithm should 
+  be clear and simple.
+* Finiteness: An algorithm should have finiteness. Here, finiteness means that the algorithm should contain 
+  a limited number of instructions, i.e., the instructions should be countable.
+* Effectiveness: An algorithm should be effective as each instruction in an algorithm affects the overall 
+  process.
+* Language independent: An algorithm must be language-independent so that the instructions in an algorithm 
+  can be implemented in any of the languages with the same output.
 
 Correctness
 
