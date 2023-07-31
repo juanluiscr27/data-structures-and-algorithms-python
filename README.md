@@ -554,7 +554,7 @@ Common applications of Trie data structure include:
   following reasons. 
 * Browser history. It is also used to complete the URL in the browser.
 
-#### Trie Basic Operations 
+#### Tries Basic Operations 
 * Insert
 * Search
 * Delete
@@ -617,7 +617,21 @@ Space Complexity
 
 ### Search
 
+#### Linear Search
+
+#### Binary Search
+
 ### Sort
+
+#### Selection Sort
+
+#### Bubble Sort
+
+#### Insertion Sort
+
+#### Merge Sort
+
+#### Quick Sort
 
 ### Insert
 
@@ -627,12 +641,30 @@ Space Complexity
 
 ### Recursion
 
+### Top K element
+
+### Backtracking
+
+### Sliding Window
+
 ### Tree Traversal
 
 ### Graph Traversal
 
-### Depth First Search
+#### Depth First Search
 
-### Breadth First Search
+#### Breadth First Search
 
 ### Dynamic Programming
+
+### Topological Sorting
+
+### Dijkstra's Algorithm
+
+### Greedy Algorithm
+
+### Intervals
+
+### Math Algorithms
+
+### Bit Manipulation
